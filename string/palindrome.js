@@ -1,5 +1,4 @@
 const checkPalindrome = (str) => {
-
   if (typeof str !== "string") return "Not a string";
   
   if (str.length === 0) return "Empty string";
