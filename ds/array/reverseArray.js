@@ -1,5 +1,5 @@
 const reverseUsingMap=(arr=[])=> {
-  return arr.map((element, index) => arr[arr.length - 1 - index]);
+  return arr.map((ele, index) => arr[arr.length - 1 - index]);
 }
 
 const reverse = (arr=[]) => {
