@@ -1,4 +1,4 @@
-const randomArray = () => {
+export const randomArray = () => {
   let arr = [];
   let no_of_elements = Math.round(Math.random() * 5 + 5);
   for (let i = 0; i < no_of_elements; i++) {
@@ -6,3 +6,5 @@ const randomArray = () => {
   }
   return arr;
 };
+
+export default randomArray();

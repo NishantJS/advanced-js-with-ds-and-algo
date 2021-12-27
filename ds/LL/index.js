@@ -110,4 +110,4 @@ console.log([...new Set(list.printList())].join(""));
 
 
 export default null;
-export {LinkedList, Node}
+export { LinkedList, Node };
