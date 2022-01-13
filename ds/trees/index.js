@@ -25,4 +25,4 @@ const mi9 = new TreeNode("mi 9");
 
 mi.child.push(mi7, mi8, mi9);
 
-console.log(xiaomi);
+console.log(JSON.stringify(xiaomi));
