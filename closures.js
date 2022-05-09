@@ -1,6 +1,6 @@
-for (var i = 0; i < 3; i++){
-  const log = () => {
-    console.log(i)
+for (let i = 0; i < 3; i++) {
+  function log() {
+    console.log(i);
   }
 
   // log();
@@ -10,16 +10,14 @@ for (var i = 0; i < 3; i++){
 //! Var get hoisted o / p: 333
 //? let o/p: 012
 
-
 const outerFunction = () => {
   let v = 10;
   const innerFunction = () => {
     return v;
-  }
+  };
   return innerFunction();
 };
 
 const z = outerFunction();
 
-
-console.log(z);
+// console.log(z);
