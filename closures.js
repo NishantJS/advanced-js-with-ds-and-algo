@@ -3,7 +3,6 @@ for (let i = 0; i < 3; i++) {
     console.log(i);
   }
 
-  // log();
   setTimeout(log, 100);
 }
 
@@ -20,4 +19,35 @@ const outerFunction = () => {
 
 const z = outerFunction();
 
-// console.log(z);
+console.log(z);
+
+const add = (() => {
+  let counter = 0;
+  return () => {
+    counter += 1;
+    return counter;
+  };
+})();
+
+add();
+add();
+add();
+console.log(add());
+
+function Add(count = 0) {
+  this.count = count;
+  this.add = function () {
+    this.count++;
+  };
+  this.show = function show() {
+    return this.count;
+  };
+}
+const counter = new Add(88);
+counter.add();
+counter.add();
+counter.add();
+counter.add();
+counter.add();
+counter.add();
+console.log(counter.show());
