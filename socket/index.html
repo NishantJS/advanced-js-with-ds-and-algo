@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+
+    <script>
+      const ws = new WebSocket("ws://localhost:8000");
+
+      const printMessage = (message) => {
+        const li = document.createElement("li");
+        const text = document.createTextNode(message);
+        li.appendChild(text);
+
+        const messagesContainer = document.getElementById("messages");
+        messagesContainer.appendChild(li);
+      };
+
+      ws.addEventListener("open", () => {
+        printMessage("hello");
+        ws.send("Nishant Chorge ");
+      });
+
+      ws.addEventListener("message", (message) => {
+        printMessage(message?.data);
+        setTimeout(
+          () =>
+            ws.send(
+              message?.data?.toString()?.toLowerCase() +
+                Math.floor(Math.random() * 10)
+            ),
+          1
+        );
+      });
+
+      // ws.addEventListener("error", (e) => console.log(e));
+      ws.addEventListener("close", () => printMessage("Closed"));
+    </script>
+  </body>
+</html>
