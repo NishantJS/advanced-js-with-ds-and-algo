@@ -1,9 +1,9 @@
 import { expect } from "chai";
-import gradingStudents from "../gradingStudents.js";
+import gradingStudents from "../algo/gradingStudents.js";
 
 const grades = [38, 40, 55, 58, 67, 69, 66];
 
-describe("shoud grade students", () => {
+describe("should grade students", () => {
   const updatedGrades = gradingStudents(grades);
 
   it("should check if response is array", () => {

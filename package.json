@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "ws": "node socket/index.js",
+    "serve": "node http/server.js",
     "test": "mocha"
   },
   "repository": {

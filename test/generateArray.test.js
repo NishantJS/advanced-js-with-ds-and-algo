@@ -1,4 +1,4 @@
-import { randomNumber, generateArray } from "../randomArray.js";
+import { randomNumber, generateArray } from "../algo/randomArray.js";
 import { assert } from "chai";
 
 describe("generate random array of given length", () => {

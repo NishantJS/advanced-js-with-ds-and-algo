@@ -28,5 +28,4 @@ const quickSort = (array) => {
 const names = ["Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David"];
 const numbers = [5, 20, 20, 4, 1, 0, 5, 8, 9, Infinity, -Infinity];
 console.log(quickSort(numbers));
-console.log(quickSort("Hello"));
 console.log(quickSort(names));

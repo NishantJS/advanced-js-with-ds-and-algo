@@ -26,13 +26,12 @@ let name3 = {
   lastName: "Nishant",
 };
 
-function callApplyBind(age=70) {
+function callApplyBind(age = 70) {
   console.log(printFullName.call(name1, 85));
   console.log(printFullName.apply(name2, [55]));
-  let bi = printFullName.bind(name3, age);
-  return bi;
-};
+  return printFullName.bind(name3, age);
+}
 
-;(function polyFillOfBind() {
+(function polyFillOfBind() {
   console.log(callApplyBind(15)());
 })();

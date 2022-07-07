@@ -11,4 +11,4 @@ const calculate = (logic, ...args) => {
 const square = (num) => num * num;
 const cube = (num) => num * num * num;
 
-console.log(calculate(cube, 2, 5, 6, 0));
+console.log(calculate(cube, 5));
