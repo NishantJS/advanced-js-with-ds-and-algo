@@ -1,15 +1,18 @@
-"use strict";
-class Counter {
-    constructor(count = 0) {
-        this.add = (by = 1) => {
-            this.count += by;
+var Counter = /** @class */ (function () {
+    function Counter(count) {
+        if (count === void 0) { count = 0; }
+        var _this = this;
+        this.add = function (by) {
+            if (by === void 0) { by = 1; }
+            _this.count += by;
         };
-        this.show = () => {
-            return this.count;
+        this.show = function () {
+            return _this.count;
         };
         this.count = count;
     }
-}
-const counter = new Counter(55);
+    return Counter;
+}());
+var counter = new Counter(55);
 counter.add();
 console.log(counter.show());

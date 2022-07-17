@@ -1,4 +1,4 @@
-class Node{
+class Node {
   data; left; right;
   constructor(data) {
     this.data = data;
@@ -41,29 +41,29 @@ class BinarySearchTree {
     }
   }
 
-  inorder(node, arr=[]) {
+  inorder(node, arr = []) {
     if (node) {
-      this.inorder(node.left,arr);
+      this.inorder(node.left, arr);
       arr.push(node.data);
-      this.inorder(node.right,arr);
+      this.inorder(node.right, arr);
     }
-    return arr.filter(e=>e)
+    return arr.filter(e => e);
   }
 
-  preorder(node,arr=[]) {
+  preorder(node, arr = []) {
     if (node) {
-      arr.push(node.data)
-      this.preorder(node.left,arr);
-      this.preorder(node.right,arr);
+      arr.push(node.data);
+      this.preorder(node.left, arr);
+      this.preorder(node.right, arr);
     }
-    return arr.filter(e=>e)
+    return arr.filter(e => e);
   }
 
-  postorder(node,arr=[]) {
+  postorder(node, arr = []) {
     if (node) {
-      this.postorder(node.left,arr);
-      this.postorder(node.right,arr);
-      arr.push(node.data)
+      this.postorder(node.left, arr);
+      this.postorder(node.right, arr);
+      arr.push(node.data);
     }
     return arr.filter(e => e);
   }
@@ -88,3 +88,5 @@ let postorder = bst.postorder(bst.getRoot());
 
 // console.log(bst.getRoot());
 console.log({ inorder, preorder, postorder });
+
+export default Node;

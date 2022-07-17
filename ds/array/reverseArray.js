@@ -1,14 +1,14 @@
-const reverseUsingMap=(arr=[])=> {
-  return arr.map((ele, index) => arr[arr.length - 1 - index]);
-}
+const reverseUsingMap = (arr = []) => {
+  return arr.map((_, index) => arr[arr.length - 1 - index]);
+};
 
-const reverse = (arr=[]) => {
+const reverse = (arr = []) => {
   let rev = [];
-  for (let i = arr.length - 1; i >= 0; i--){
+  for (let i = arr.length - 1; i >= 0; i--) {
     rev.push(arr[i]);
   }
   return rev;
-}
+};
 
 const generateArray = () => {
   let arr = [];
@@ -17,7 +17,8 @@ const generateArray = () => {
     arr.push(Math.round(Math.random() * 10));
   }
   return arr;
-}
+};
 
 let arr = generateArray();
-console.log({ arr: arr,rev: reverseUsingMap(arr), rev2: reverse(arr) });
+console.log({ arr: arr, rev: reverseUsingMap(arr), rev2: reverse(arr) });
+// console.log(arr, reverseUsingSwap(arr));
