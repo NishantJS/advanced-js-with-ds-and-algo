@@ -70,5 +70,6 @@
     return this.xyz || xyz;
   }
 
-  fun1()();
+  console.log(fun1()());
 }
+

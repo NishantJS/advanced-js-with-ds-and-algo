@@ -1,5 +1,5 @@
 const hashTable = () => {
-  const table = new Array(10);
+  const table = new Array(1);
 
   const hash = (key) => {
     let hash = 0;
@@ -11,7 +11,8 @@ const hashTable = () => {
 
   const set = (key, value) => {
     const index = hash(key);
-    table[index] = value;
+    console.log(table[index]);
+    table[index] = table[index] ? [...[table[index]], value] : value;
   };
 
   const get = (key) => {
@@ -36,6 +37,5 @@ hash.set("fname", "John");
 hash.set("lname", "Cohn");
 hash.set("name", "Hohn");
 console.log(hash.get("fname"));
-console.log("%c", 100, hash.get("lname"), hash.get("nname"));
-// hash.remove("name");
+console.log("%c", 100, hash.get("lname"), hash.get("name"));
 console.log(hash.get("name"));

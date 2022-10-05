@@ -2,10 +2,11 @@ import readline from "readline";
 
 const read = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
-const prompt = (query) => new Promise((resolve) => read.question(query, resolve));
+const prompt = (query) =>
+  new Promise((resolve) => read.question(query, resolve));
 
 (async () => {
   try {

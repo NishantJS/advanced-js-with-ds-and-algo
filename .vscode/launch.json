@@ -5,6 +5,27 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "type": "java",
+      "name": "Launch main",
+      "request": "launch",
+      "mainClass": "main",
+      "projectName": "advanced-js-with-ds-and-algo_a4795f82"
+    },
+    {
+      "type": "java",
+      "name": "Launch main",
+      "request": "launch",
+      "mainClass": "java.main",
+      "projectName": "advanced-js-with-ds-and-algo_a4795f82"
+    },
+    {
+      "type": "java",
+      "name": "Launch HelloWorld",
+      "request": "launch",
+      "mainClass": "java.HelloWorld",
+      "projectName": "advanced-js-with-ds-and-algo_a4795f82"
+    },
+    {
       "type": "pwa-chrome",
       "request": "launch",
       "name": "Launch Chrome against localhost",

@@ -4,9 +4,8 @@ const printFullName = function (age = 18) {
   if (age > 120 || age < 13)
     return new RangeError("Please enter valide age range");
 
-  let fullName = `${this.firstName || "firstname"} ${
-    this.lastName || "lastname"
-  } from ${this.city || "Mumbai"} of age ${age}`;
+  let fullName = `${this.firstName || "firstname"} ${this.lastName || "lastname"
+    } from ${this.city || "Mumbai"} of age ${age}`;
   return fullName;
 };
 
@@ -26,11 +25,11 @@ let name3 = {
   lastName: "Nishant",
 };
 
-function callApplyBind(age = 70) {
+const callApplyBind = (age = 70) => {
   console.log(printFullName.call(name1, 85));
   console.log(printFullName.apply(name2, [55]));
   return printFullName.bind(name3, age);
-}
+};
 
 (function polyFillOfBind() {
   console.log(callApplyBind(15)());
